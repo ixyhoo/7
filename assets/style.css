@@ -1,0 +1,72 @@
+html {
+  background: rgb(250, 250, 250);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  margin: 25px auto;
+  width: 1200px;
+  background: white;
+  display: grid;
+  grid-template-columns: 1fr 4fr 2fr;
+  grid-template-areas: "header header header" "menu main sidebar" " footer footer footer";
+}
+body > * {
+  padding: 20px;
+}
+header {
+  background: darkred;
+  color: wheat;
+  grid-area: header;
+}
+.sidebar {
+  background: grey;
+  color: wheat;
+  grid-area: sidebar;
+}
+.menu {
+  background: darkcyan;
+  color: wheat;
+  grid-area: menu;
+}
+main {
+  grid-area: main;
+}
+footer {
+  background: darkgreen;
+  color: wheat;
+  grid-area: footer;
+}
+.menu ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+.menu ul li {
+  padding: 10px;
+}
+.menu ul li a {
+  text-decoration: none;
+  color: wheat;
+}
+h1 {
+  text-align: center;
+}
+@media (max-width: 1200px) {
+  body {
+    width: 100%;
+    margin: 0;
+  }
+}
+@media (max-width: 900px) {
+  body {
+    grid-template-areas: "header header header" "menu main main" "sidebar sidebar sidebar" " footer footer footer";
+  }
+}
+@media (max-width: 600px) {
+  body {
+    grid-template-areas: "header header header" "menu menu menu" "main  main main" "sidebar sidebar sidebar" " footer footer footer";
+  }
+  .menu ul li {
+    display: inline;
+  }
+}
